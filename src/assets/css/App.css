@@ -1,0 +1,189 @@
+/* MAIN STYLING */
+*,
+*::before,
+*::after {
+    box-sizing: border-box; 
+}
+
+:root{
+  --accent-dark: #34495e;
+  --accent-mid: #ff9800;
+  --accent-bright: #23f045;
+  --contrast-bright: #03afce;
+ font-size: 16px;
+}
+
+body {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+
+/* CONTAINERS */
+.app-header {
+  margin-bottom: 2em;
+  text-align: center;
+  color: var(--contrast-bright);
+}
+
+.hangman {
+  max-width: 800px;
+  color: #fff;
+  text-align: center;
+}
+
+.guessed-word{
+  letter-spacing: 0.5em;
+  margin: 0.4em -1em 0.2em 0;
+  font-size: 2rem;
+}
+
+.container-hangman-btns {
+  text-align: center;
+  display: inline-block;
+  width: 400px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.howPlay {
+  background-color: #cfcdcd;
+  border-radius: 0.5em;
+  color: black;
+  font-size: 1rem;
+  margin: 2rem 1rem;
+  padding: 1em 2em;
+  text-align: left;
+}
+
+
+/* BUTTONS */
+button {
+  border: none;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  border-radius: 5px;
+}
+
+.hangman button:disabled {
+  background: #bdbdbd;
+  color: #eeeeee;
+  box-shadow: 0 2px #9e9e9e;
+}
+
+.btn-hangman {
+  width: 40px;
+  margin: 4px 2px 2px 2px;
+  background: #018f19;
+  color: #fff;
+  box-shadow: 0 2px #046b3b;
+  padding: 0.25em 0.5em 0.5em 0.5em;
+  font-weight: 700;
+}
+
+.btn-hangman:hover,
+ .btn-hangman:focus {
+  background: var(--contrast-bright);
+}
+
+.btn-reset,
+.btn-howplay {
+  box-shadow: 0 2px #045c6b;
+  padding: 0.25em 0.5em 0.5em 0.5em;
+  background-color: var(--contrast-bright);
+  margin: 0 6px;
+  font-weight: 700;
+}
+
+.btn-reset:hover,
+.btn-howplay:hover {
+  background-color: var(--accent-mid);
+}
+
+
+/* IMAGES */
+img {
+  border: 10px solid white;
+  border-radius: 0.5em;
+}
+
+
+/* TEXT */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 0.1em;
+}
+
+.larger {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.won {
+  color: var(--accent-bright);
+}
+
+.lost {
+  color: var(--accent-mid);
+}
+
+
+/* MEDIA QUERIES */
+/* Reduces sizes for screens under 412px */
+@media screen and (max-width: 412px) {
+  .root {
+  font-size: 14px;
+  }
+
+  .app-header {
+    margin-bottom: 1em;
+  } 
+   
+  .hangman {
+    max-width: 100%;
+  }
+
+  .container-hangman-btns {
+    width: 100%;
+    margin-top: 0.25em;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0.1em;
+  }
+
+  .larger {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .btn-reset,
+  .btn-howplay {
+    margin: 0 2px;
+    font-size: 0.8rem;
+  }
+
+  .btn-hangman {
+    width: 30px;
+    margin: 2px 1px 1px 1px;
+    font-size: 0.8rem;
+  }
+
+  #howPlay {
+    font-size: 0.9rem;
+    margin: 0 1rem;
+    padding: 0.1em 1.2em;
+    text-align: left;
+  }
+
+  #howPlay li {
+    font-size: 0.9rem;
+  }
+}
+
