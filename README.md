@@ -18,7 +18,7 @@ Then in the new project directory, to run the game:
 
 To stop the game running, in the project directory use:
 
-### CTRL+c
+### `CTRL+c`
 
 ## Game Rules
 
